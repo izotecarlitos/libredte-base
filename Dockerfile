@@ -3,7 +3,7 @@ FROM php:7.3-apache
 RUN apt-get update 
 
 RUN apt-get install -y \
-    git apt-transport-https lsb-release wget mercurial \
+    git wget mercurial nano apt-transport-https lsb-release \
     libcurl4-gnutls-dev libpng-dev libjpeg-dev libssl-dev \
     libc-client-dev libkrb5-dev libghc-postgresql-libpq-dev \
     libxml2-dev libmcrypt-dev libpq-dev zlib1g-dev libzip-dev 
