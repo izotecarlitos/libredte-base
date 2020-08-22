@@ -20,7 +20,7 @@ RUN docker-php-ext-configure gd --with-jpeg-dir=/usr/lib \
     && docker-php-ext-install -j$(nproc) pdo pdo_pgsql curl soap zip 
 
 RUN pear channel-update pear.php.net \
-    && pear install Mail Mail_mime Net_SMTP 
+    && pear install --alldeps Mail Mail_mime Net_SMTP 
     
 RUN a2dismod mpm_event \
     && a2enmod mpm_prefork rewrite ssl php7 \
